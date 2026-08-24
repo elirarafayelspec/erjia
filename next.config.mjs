@@ -22,6 +22,15 @@ function resolveDistDir() {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typedRoutes: true,
+
+  // GitHub Pages 静态部署
+  output: "export",
+  basePath: "/erjia",
+  assetPrefix: "/erjia/",
+  images: {
+    unoptimized: true,
+  },
+
   outputFileTracingRoot: projectRoot,
   distDir: resolveDistDir(),
   eslint: {
